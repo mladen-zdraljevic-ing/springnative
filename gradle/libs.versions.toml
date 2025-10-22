@@ -1,6 +1,6 @@
 [versions]
-kotlin = "2.0.20"
-spring-boot = "3.3.0"
+kotlin = "2.2.20"
+spring-boot = "3.5.3"
 spring-security = "6.3.0"
 rest-assured-kotlin-extensions = "5.5.6"
 
