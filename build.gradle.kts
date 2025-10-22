@@ -1,5 +1,6 @@
 
 plugins {
+    id("net.helpscout.core.jvm-conventions")
     id("hs-openapi-conventions")
     id("org.springframework.boot")
     id("io.spring.dependency-management")

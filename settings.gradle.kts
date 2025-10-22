@@ -1,5 +1,19 @@
 rootProject.name = "springnative"
 
+pluginManagement {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/helpscout/*")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("HS_GITHUB_PACKAGES_USER")
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("HS_GITHUB_PACKAGES_TOKEN")
+            }
+        }
+        gradlePluginPortal()
+    }
+}
+
 buildscript {
     repositories {
         maven {
