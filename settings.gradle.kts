@@ -28,8 +28,8 @@ buildscript {
     }
     dependencies {
         classpath(enforcedPlatform("helpscout:hs-backend-platform:4.4.0"))
-//        classpath("helpscout.gradle.conventions:gradle-convention-plugins")
+        classpath("helpscout.gradle.conventions:gradle-convention-plugins")
     }
 }
 
-//plugins.apply("hs-openapi-settings")
+plugins.apply("hs-openapi-settings")

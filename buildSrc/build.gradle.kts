@@ -16,7 +16,7 @@ repositories {
 
 dependencies {
     implementation(enforcedPlatform(libs.hs.backend.platform))
-//    implementation("helpscout.gradle.conventions:gradle-convention-plugins")
+    implementation("helpscout.gradle.conventions:gradle-convention-plugins")
 //    implementation(libs.spring.boot.gradle.plugin)
     implementation(libs.kotlin.gradle.plugin)
     implementation(libs.kotlin.noarg.plugin)
