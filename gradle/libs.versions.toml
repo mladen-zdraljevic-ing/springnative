@@ -1,0 +1,59 @@
+[versions]
+kotlin = "2.2.20"
+spring-boot = "3.5.3"
+spring-security = "6.3.0"
+rest-assured-kotlin-extensions = "5.5.6"
+
+[libraries]
+# We manage these lib versions implicitly via Spring Boot
+assertj = { group = "org.assertj", name = "assertj-core" }
+awaitility = { group = "org.awaitility", name = "awaitility-kotlin" }
+commons-lang3 = { group = "org.apache.commons", name = "commons-lang3" }
+jackson-module-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin" }
+liquibase = { group = "org.liquibase", name = "liquibase-core" }
+micrometer-core = { group = "io.micrometer", name = "micrometer-core" }
+mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version = "6.1.0" }
+mockito-inline = { group = "org.mockito", name = "mockito-inline", version = "5.2.0" }
+mysql-connector = { group = "com.mysql", name = "mysql-connector-j" }
+rest-assured = { group = "io.rest-assured", name = "rest-assured" }
+rest-assured-spring-mock-mvc = { group = "io.rest-assured", name = "spring-mock-mvc" }
+spring-boot-configuration-processor = { group = "org.springframework.boot", name = "spring-boot-configuration-processor" }
+spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation" }
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web" }
+spring-boot-testcontainers = { group = "org.springframework.boot", name = "spring-boot-testcontainers" }
+spring-security-crypto = { group = "org.springframework.security", name = "spring-security-crypto" }
+spring-security-web = { group = "org.springframework.security", name = "spring-security-web" }
+# We manage these library versions explicitly via Dependabot
+datasource-proxy = { group = "net.ttddyy", name = "datasource-proxy", version = "1.11.0" }
+hs-backend-platform = { group = "helpscout", name = "hs-backend-platform", version = "4.4.0" }
+hs-data-jpa-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-data-jpa-spring-boot-starter" }
+hs-events-rich-domain-model = { group = "net.helpscout.events", name = "rich-domain-events", version = "v55" }
+hs-json-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-json-spring-boot-starter" }
+hs-logging-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-logging-spring-boot-starter" }
+hs-openapi-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-openapi-spring-boot-starter" }
+hs-outbox-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-outbox-pattern-spring-boot-starter" }
+hs-sentry-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-sentry-spring-boot-starter" }
+hs-test-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-test-spring-boot-starter" }
+hs-web-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-web-spring-boot-starter" }
+hs-legacy-spring-boot-starter = { group = "helpscout.spring.boot.starter", name = "hs-legacy-spring-boot-starter" }
+hs-archunit-rules = { group = "helpscout.archunit", name = "archunit-rules" }
+kafka-protobuf-seralizer = { group = "io.confluent", name = "kafka-protobuf-serializer", version = "8.1.0" }
+jsqlparser = { group = "com.github.jsqlparser", name = "jsqlparser", version = "5.3" }
+open-telemetry = { group = "io.opentelemetry", name = "opentelemetry-api", version = "1.55.0" }
+rest-assured-kotlin-extensions = { group = "io.rest-assured", name = "kotlin-extensions", version.ref = "rest-assured-kotlin-extensions" }
+rest-assured-kotlin-extensions-mock-mvc = { group = "io.rest-assured", name = "spring-mock-mvc-kotlin-extensions", version.ref = "rest-assured-kotlin-extensions" }
+testcontainers-junit-jupiter = { group = "org.testcontainers", name = "junit-jupiter" }
+testcontainers-mysql = { group = "org.testcontainers", name = "mysql" }
+swagger-request-validator-restassured = { group = "com.atlassian.oai", name = "swagger-request-validator-restassured", version = "2.46.0" }
+
+# Plugin Libs
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+micrometer-prometheus-registry = { group = "io.micrometer", name = "micrometer-registry-prometheus" }
+spring-boot-gradle-plugin = { group = "org.springframework.boot", name = "spring-boot-gradle-plugin" }
+kotlin-noarg-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-noarg", version.ref = "kotlin" }
+
+[bundles]
+mockito = ["mockito-inline", "mockito-kotlin"]
+rest-assured = ["rest-assured-kotlin-extensions"]
+spring-boot = ["spring-boot-starter-actuator", "spring-boot-starter-validation", "spring-boot-starter-web", "hs-logging-spring-boot-starter", "hs-json-spring-boot-starter", "hs-web-spring-boot-starter"]

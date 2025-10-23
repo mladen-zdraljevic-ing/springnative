@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Spring Native API
+  description: A simple API for Spring Native application
+  version: 1.0.0
+  contact:
+    name: API Support
+    email: support@example.com
+servers:
+  - url: http://localhost:8080
+    description: Development server
+paths:
+  /health:
+    get:
+      summary: Health check endpoint
+      description: Returns the health status of the application
+      operationId: getHealth
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "UP"
+                  timestamp:
+                    type: string
+                    format: date-time
+                    example: "2023-01-01T00:00:00Z"
+  /api/hello:
+    get:
+      summary: Hello endpoint
+      description: Returns a simple hello message
+      operationId: getHello
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello from Spring Native!"
+components:
+  schemas:
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
